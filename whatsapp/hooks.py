@@ -8,6 +8,40 @@ app_license = "mit"
 # Apps
 # ------------------
 
+doc_events = {
+    "Sales Order": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+
+    "Quotation": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+
+    "Purchase Order": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+
+
+    "Purchase Receipt": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+
+
+    "Payment Entry": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+
+    "DPR": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+
+    "Issue": {
+        "on_update": "whatsapp.custom_methods.send_whatsapp_message_customer",
+        "on_save": "whatsapp.custom_methods.send_whatsapp_message_customer",
+    },
+}
+
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page

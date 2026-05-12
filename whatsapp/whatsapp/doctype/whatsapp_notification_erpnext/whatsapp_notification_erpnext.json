@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:notification_name",
+ "creation": "2025-08-21 10:24:25.418092",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "notification_name",
+  "notification_type",
+  "reference_doctype",
+  "print_format",
+  "field_name",
+  "event_frequency",
+  "doctype_event",
+  "days_in_advance",
+  "date_changed",
+  "column_break_ukcg",
+  "disabled",
+  "template",
+  "campaignname",
+  "code",
+  "template_values_section",
+  "custom_template_id",
+  "template_name",
+  "template_category",
+  "integrated_number",
+  "body",
+  "whatsapp_message_variables"
+ ],
+ "fields": [
+  {
+   "fieldname": "notification_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Notification Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "notification_type",
+   "fieldtype": "Select",
+   "label": "Notification Type",
+   "options": "DocType Event\nScheduler Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "Link",
+   "label": "Print Format",
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "label": "Field Name"
+  },
+  {
+   "fieldname": "event_frequency",
+   "fieldtype": "Select",
+   "label": "Event Frequency",
+   "options": "All\nHourly\nDaily\nWeekly\nMonthly\nYearly\nHourly Long\nDaily Long\nWeekly Long\nMonthly Long"
+  },
+  {
+   "fieldname": "doctype_event",
+   "fieldtype": "Select",
+   "label": "DocType Event",
+   "options": "Before Insert\nBefore Validate\nBefore Save\nAfter Insert\nAfter Save\nBefore Submit\nAfter Submit\nBefore Cancel\nAfter Cancel\nBefore Delete\nAfter Delete\nBefore Save (Submitted Document)\nAfter Save (Submitted Document)\nDays After\nDays Before"
+  },
+  {
+   "fieldname": "days_in_advance",
+   "fieldtype": "Int",
+   "label": "Days Before or After"
+  },
+  {
+   "depends_on": "eval:doc.doctype_event==='Days Before' || doc.doctype_event==='Days After'",
+   "fieldname": "date_changed",
+   "fieldtype": "Select",
+   "label": "Reference Date"
+  },
+  {
+   "fieldname": "column_break_ukcg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Template",
+   "options": "Whatsapp Template RDash",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Code",
+   "label": "Code",
+   "options": "HTML",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_values_section",
+   "fieldtype": "Section Break",
+   "label": "Template Values"
+  },
+  {
+   "fieldname": "custom_template_id",
+   "fieldtype": "Data",
+   "label": "Template ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_category",
+   "fieldtype": "Data",
+   "label": "Template Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "integrated_number",
+   "fieldtype": "Data",
+   "label": "Integrated Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Text",
+   "label": "Body",
+   "read_only": 1
+  },
+  {
+   "fieldname": "whatsapp_message_variables",
+   "fieldtype": "Table",
+   "label": "WhatsApp Message Variables",
+   "options": "WhatsApp Message Variable"
+  },
+  {
+   "description": "Add Campaign Name For Aisensy",
+   "fieldname": "campaignname",
+   "fieldtype": "Data",
+   "label": "Campaign Name",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-04 11:10:47.024470",
+ "modified_by": "Administrator",
+ "module": "Whatsapp",
+ "name": "WhatsApp Notification ErpNext",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
